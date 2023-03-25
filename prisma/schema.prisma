@@ -9,3 +9,34 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+enum CoreType {
+    SOLID
+    GAS
+}
+
+model Planet {
+  id               String @id @default(uuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  name             String
+  size             Int // not sure about type...
+  distanceFromSun  Int
+  factOne          String
+  factTwo          String
+  factThree        String
+
+  moon  Moon[]
+}
+
+model Moon {
+  id               String @id @default(uuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  name             String
+  historyOfName    String
+  size             Int // type?
+
+  planetId String
+  planet   Planet @relation(fields: [planetId], references: [id])
+}
