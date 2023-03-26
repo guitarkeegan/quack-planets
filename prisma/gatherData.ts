@@ -1,5 +1,5 @@
 
-async function gatherData() {
+export async function gatherData() {
 
   type AllPlanetsObj = {
     bodies: { 
