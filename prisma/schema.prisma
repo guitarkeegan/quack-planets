@@ -20,7 +20,7 @@ model Planet {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
   name             String
-  size             Int // not sure about type...
+  size             Int
   distanceFromSun  Int
   factOne          String
   factTwo          String
@@ -36,7 +36,7 @@ model Moon {
   updatedAt        DateTime @updatedAt
   name             String
   historyOfName    String
-  size             Int // type?
+  size             Int
 
   planetId String
   planet   Planet @relation(fields: [planetId], references: [id])
