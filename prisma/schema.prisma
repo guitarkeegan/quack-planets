@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum CoreType {
+enum CORE_TYPE {
     SOLID
     GAS
 }
@@ -25,6 +25,7 @@ model Planet {
   factOne          String
   factTwo          String
   factThree        String
+  coreType         CORE_TYPE
 
   moon  Moon[]
 }
