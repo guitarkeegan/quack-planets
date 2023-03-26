@@ -20,8 +20,8 @@ model Planet {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
   name             String
-  size             Int
-  distanceFromSun  Int
+  vol              String
+  mass             String
   factOne          String
   factTwo          String
   factThree        String
