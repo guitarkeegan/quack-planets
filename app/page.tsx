@@ -4,6 +4,7 @@ import styles from './page.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  
   return (
     <main className="text-white text-6xl bg-black">
       Here is the main
