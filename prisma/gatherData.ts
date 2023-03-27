@@ -1,3 +1,4 @@
+import { CORE_TYPE } from "@prisma/client"
 
 export async function gatherData() {
 
@@ -20,7 +21,8 @@ export async function gatherData() {
           moon: string,
           rel: string
         }
-      ]
+      ],
+      coreType:  CORE_TYPE
     
     }[]
   }
@@ -32,16 +34,23 @@ export async function gatherData() {
   console.log(planetsArr)
   // console.log("get all planet ids...");
 
-  const planetObjs = planetsArr['bodies'].map(planet=>({
+  const planetObjs  = planetsArr['bodies'].map(planet=>({
     
       name: planet.englishName,
       vol: `${planet.vol.volValue} ^ ${planet.vol.volExponent} km ^ 3`,
       mass: `${planet.mass.massValue} ^ ${planet.mass.massExponent} kg`,
-      moons: planet.moons
-    
+      moons: [...planet.moons],
+    size:planet.mass.massValue,
+    distanceFromSun: 0,
+    factOne: `${planet.englishName} was discoved by ${planet.discoveredBy}`,
+    factTwo: `${planet.englishName} was discovered on ${planet.discoveryDate}`,
+    factThree: `${planet.englishName} has ${planet.moons.length} moons `,
+    coreType: planet.coreType,
+
   }));
   console.log("formatting planet data...")
   console.log(planetObjs)
+  return planetObjs;
 
   // const getAllIds: AllIds = await (
   //   await fetch(

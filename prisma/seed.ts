@@ -3,20 +3,23 @@
 import { PrismaClient } from "@prisma/client";
 import { gatherData } from "./gatherData";
 
-const prisma = new PrismaClient();
+const db = new PrismaClient();
 
 
 async function main() {
   const data = await gatherData();
-prisma.planet.createMany(data);
+  
+await db.planet.createMany({
+data: [...data]
+});
   
 }
 main()
   .then(async () => {
-    await prisma.$disconnect();
+    await db.$disconnect();
   })
   .catch(async (e) => {
     console.error(e);
-    await prisma.$disconnect();
+    await db.$disconnect();
     process.exit(1);
   });
