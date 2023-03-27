@@ -1,9 +1,9 @@
-//import { db } from "@/lib/db";
+import { db } from "@/lib/db";
 //import { CORE_TYPE } from "@prisma/client";
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 import { gatherData } from "./gatherData";
 
-const db = new PrismaClient();
+// const db = new PrismaClient();
 
 
 async function main() {
