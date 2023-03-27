@@ -1,3 +1,4 @@
+import { db } from "@/lib/db"
 
 async function gatherData() {
 
@@ -29,8 +30,7 @@ async function gatherData() {
 
   const planetsArr: AllPlanetsObj = await planets.json()
 
-  console.log(planetsArr)
-  // console.log("get all planet ids...");
+
 
   const planetObjs = planetsArr['bodies'].map(planet=>({
     
@@ -41,8 +41,10 @@ async function gatherData() {
     
   }));
   console.log("formatting planet data...")
-  console.log(planetObjs)
-
+  for(let i =0;i<planetObjs.length; i++){
+    console.log(planetObjs[i])
+    db.planet.create({name:planetObjs[i].name })
+  }
   // const getAllIds: AllIds = await (
   //   await fetch(
   //     "https://api.le-systeme-solaire.net/rest/bodies/?data=id&filter[]=bodyType,eq,Planet"
