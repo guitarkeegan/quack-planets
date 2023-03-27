@@ -1,16 +1,12 @@
 import Jupiter from "@/components/Jupiter";
 
-export default function Planet({params}: {
-    params: { planet: string };
-  }){
+// TODO: make db call here and pass props to planet component
 
-    switch (params.planet){
-        case "jupiter":
-            return <Jupiter />
-        default:
-            return <Jupiter />
-    }
-
-
-    
+export default function Planet({ params }: { params: { planet: string } }) {
+  switch (params.planet) {
+    case "jupiter":
+      return <Jupiter />;
+    default:
+      return <Jupiter />;
+  }
 }
