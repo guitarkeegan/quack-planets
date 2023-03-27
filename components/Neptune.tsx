@@ -1,4 +1,9 @@
+import { db } from "@/lib/db"
+
+// TODO define getData() to make db call
+
 export default function Neptune(){
+    // TODO call getData()
     return (
         <section className="sm:grid sm:grid-cols-2 mt-24">
             <div className="text-white flex items-start justify-evenly flex-col px-6">
