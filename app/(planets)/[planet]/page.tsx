@@ -6,26 +6,29 @@ import Mars from "@/components/Mars";
 import Saturn from "@/components/Saturn";
 import Uranus from "@/components/Uranus";
 import Neptune from "@/components/Neptune";
-
+import PlanetDisplay from "@/components/planets/PlanetDisplay";
 export default function Planet({ params }: { params: { planet: string } }) {
-  switch (params.planet) {
-    case "jupiter":
-      return <Jupiter />;
-    case "earth":
-      return <Earth />;
-    case "mars":
-      return <Mars />;
-    case "venus":
-      return <Venus />;
-    case "uranus":
-      return <Uranus />;
-    case "mercury":
-      return <Mercury />;
-    case "saturn":
-      return <Saturn />;
-    case "neptune":
-      return <Neptune />;
-    default:
-      return <Jupiter />;
-  }
+console.log(params)
+return <PlanetDisplay name={params.planet} description="this is  a planet"/>
+
+  // switch (params.planet) {
+  //   case "jupiter":
+  //     return <Jupiter />;
+  //   case "earth":
+  //     return <Earth />;
+  //   case "mars":
+  //     return <Mars />;
+  //   case "venus":
+  //     return <Venus />;
+  //   case "uranus":
+  //     return <Uranus />;
+  //   case "mercury":
+  //     return <Mercury />;
+  //   case "saturn":
+  //     return <Saturn />;
+  //   case "neptune":
+  //     return <Neptune />;
+  //   default:
+  //     return <Jupiter />;
+  // }
 }
