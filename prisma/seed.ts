@@ -1,11 +1,7 @@
-import { db } from "@/lib/db";
-import { CORE_TYPE } from "@prisma/client";
+import { db } from '@/lib/db';
+import { CORE_TYPE } from '@prisma/client';
 
-
-async function main() {
-  
-  
-}
+async function main() {}
 main()
   .then(async () => {
     await db.$disconnect();
