@@ -16,17 +16,16 @@ enum CORE_TYPE {
 }
 
 model Planet {
-  id                   String    @id @default(uuid())
-  createdAt            DateTime  @default(now())
-  updatedAt            DateTime  @updatedAt
-  name                 String
-  radiuskm             Int
-  minDistanceFromSunkm Int
-  maxDistanceFromSunkm Int
-  factOne              String
-  factTwo              String
-  factThree            String
-  coreType             CORE_TYPE
+  id                       String    @id @default(uuid())
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+  name                     String
+  radiuskm                 Float
+  averageDistanceFromSunkm BigInt
+  factOne                  String
+  factTwo                  String
+  factThree                String
+  coreType                 CORE_TYPE
 
   moon Moon[]
 }
