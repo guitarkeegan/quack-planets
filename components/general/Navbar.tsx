@@ -7,7 +7,7 @@ interface Route{
 const routes: Route[] = [
    {
     href: '/',
-    name: 'home'
+    name: 'Home'
    },
    {
     href:'/mercury',
