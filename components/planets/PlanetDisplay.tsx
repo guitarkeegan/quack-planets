@@ -26,8 +26,6 @@ const PlanetDisplay = ({name,  description} : PlanetComponentProps)=>{
 }
 
 
-export function getServerSideProps(){
 
-}
 
 export default PlanetDisplay;
