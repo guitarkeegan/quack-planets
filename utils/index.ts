@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+import { db } from "@/lib/db";
 
 export const getAllPlanets = async () => {
-  let allPlanets = await prisma.planet.findMany();
+  let allPlanets = await db.planet.findMany();
 
   return allPlanets;
 };
+
