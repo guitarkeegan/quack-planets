@@ -23,7 +23,7 @@ const PlanetDisplay : FC<PlanetComponentProps> = ({ name, description }) => {
         className="sm:mt-0 mt-12 flex justify-center items-center"
       >
         <div
-          id="jupiter"
+          id={styles[name.toLocaleLowerCase()]}
           className={planets(name.toLowerCase())}
         ></div>
       </div>
@@ -42,7 +42,7 @@ const planets = (name: string) => {
     case "mars":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
     case "jupiter":
-      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
+      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] rounded-full"
     case "saturn":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
     case "uranus":
