@@ -1,13 +1,16 @@
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
+import { getAllPlanets } from "@/utils";
 
 const inter = Inter({ subsets: ["latin"] });
-//todo we can pull the names from the db somewhere and set the slugs as their names for keeping routes from having to be hardcoded.
-export default function Home() {
+
+export default async function Home() {
+  const planets = await getAllPlanets();
   return (
     <main className="text-white text-6xl bg-black">
-      Here is the main
- 
+      {planets.map((planet) => (
+        <div key={planet.id}>{planet.name}</div>
+      ))}
     </main>
   );
 }

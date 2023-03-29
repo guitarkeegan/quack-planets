@@ -1,50 +1,28 @@
+import { getAllPlanets } from "@/utils";
 import Link from "next/link";
 
 interface Route{
     href: string,
     name: string
 }
-const routes: Route[] = [
-   {
-    href: '/',
-    name: 'Home'
-   },
-   {
-    href:'/mercury',
-    name: 'Mercury'
-   },
-   {
-    href: "/venus",
-    name:  "Venus",
-   },
-   {
-    href: "/earth",
-    name:  "Earth",
-   },
-   {
-    href: "/mars",
-    name:  "mars",
-   },
-   {
-    href: "/jupiter",
-    name:  "Jupiter",
-   },
-   {
-    href: "/saturan",
-    name:  "saturan",
-   },
-   {
-    href: "/uranus",
-    name:  "Uranus",
-   },
-   {
-    href: "/neptune",
-    name:  "Neptune",
-   },
 
-];
+const getRoutes = async ()=>{
+  const routes : Route[] = [{href:'/', name:'Home'}];
+  const planets = await  getAllPlanets();
 
-const Navbar = () => {
+  planets.map(planet=>{
+   let route : Route = {href: `/${planet.name}`, name:planet.name}
+   routes.push(route);
+
+  });
+
+  return routes;
+}
+
+
+
+const Navbar = async () => {
+  const  routes : Route[]=  await getRoutes();
   return (
     <div className="bg-white p-4 ">
       {routes.map((route, index) => (
