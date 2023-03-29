@@ -3,15 +3,19 @@
  * todo display on planets pages.
  */
 
+import { FC } from "react";
+import styles from './styles.module.css';
 type PlanetComponentProps = {
   name: string;
   description: string;
 };
-const PlanetDisplay = ({ name, description }: PlanetComponentProps) => {
+// todo add props for a style object. 
+const PlanetDisplay : FC<PlanetComponentProps> = ({ name, description }) => {
+  
   return (
-    <section className="sm:grid sm:grid-cols-2 mt-24">
-      <div className="text-white flex items-start justify-evenly flex-col px-6">
-        <h1 className="text-8xl">{name}</h1>
+    <section className="sm:grid sm:grid-cols-2 mt-24" >
+      <div className="text-white flex items-start justify-evenly flex-col px-6" >
+        <h1 className={styles[name.toLocaleLowerCase()]}>{name}</h1>
         <h2 className="text-2xl">{description}</h2>
       </div>
       <div
