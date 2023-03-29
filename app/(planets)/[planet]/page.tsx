@@ -11,12 +11,3 @@ export default function Planet<PlanetPageProps>({ params }: { params: { planet: 
 return <PlanetDisplay name={params.planet} description="this is  a planet"/>
 }
 
-Planet.getInitialProps = async ({req, res}: NextPageContext) =>{
-  // todo call database from here.
-}
-export function getServerSideProps(){
-
-}
-export function getStaticProps(){
-
-}
