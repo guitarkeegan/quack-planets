@@ -4,7 +4,7 @@
  */
 
 import { FC } from "react";
-import styles from './auroiahStyles.module.css';
+import styles from './styles.module.css';
 type PlanetComponentProps = {
   name: string;
   description: string;
@@ -13,9 +13,9 @@ type PlanetComponentProps = {
 const PlanetDisplay : FC<PlanetComponentProps> = ({ name, description }) => {
   
   return (
-    <section className="sm:grid sm:grid-cols-2 mt-24"   >
-      <div className="text-white flex items-start justify-evenly flex-col px-6" id={styles[`${name.toLocaleLowerCase()}-container`]}>
-        <h1 >{name}</h1>
+    <section className="sm:grid sm:grid-cols-2 mt-24" >
+      <div className="text-white flex items-start justify-evenly flex-col px-6">
+        <h1 className={styles[name.toLocaleLowerCase()]}>{name}</h1>
         <h2 className="text-2xl">{description}</h2>
       </div>
       <div
@@ -48,7 +48,7 @@ const planets = (name: string) => {
     case "earth":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
     case "mars":
-      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400  rounded-full" 
+      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
     case "jupiter":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[250px] h-[250px] rounded-full flex justify-center items-center"
     case "saturn":

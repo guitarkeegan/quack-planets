@@ -5,3 +5,26 @@
 .saturn{
     color: yellow;
 }
+
+#jupiter {
+    background: linear-gradient(140deg, #ffedd5, #fdba74, #f97316, #fdba74, #ffedd5)
+}
+
+#red-dot {
+    border-radius: 50%;
+}
+
+#saturn {
+    background: linear-gradient(180deg, rgb(75, 81, 86), rgb(138, 134, 114), rgb(157, 151, 114), rgb(200, 178, 116), rgba(255, 255, 255, .9), rgb(200, 178, 116), rgb(157, 151, 114), rgb(138, 134, 114), rgb(75, 81, 86))
+}
+
+#mars {
+    background: linear-gradient(145deg, rgba(134, 46, 5, 0.733) 25%,rgb(41, 24, 16,.5) 50.71%, rgba(65, 32, 2, 0.5) 75%,rgba(56, 4, 2, 0.5) 100%);
+    
+    
+    }
+    
+    #mars-container {
+    color: red;
+        
+    }
