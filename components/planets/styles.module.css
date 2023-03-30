@@ -35,3 +35,7 @@
     transform: rotateY(180deg);
     transform: rotateZ(90deg);
     }
+
+#earth-overlay {
+    background: linear-gradient(180deg, rgb(241 245 249), rgba(134, 134, 134, 0), rgba(60, 66, 90, 0), rgba(21, 36, 80, 0), rgba(21, 36, 80, 0), rgba(60, 66, 90, 0), rgba(134, 134, 134, 0), rgb(241 245 249));
+}
