@@ -5,6 +5,9 @@
 
 import { FC } from "react";
 import styles from "./styles.module.css";
+import EarthDisplay from "./EarthDisplay";
+import SaturnDisplay from "./SaturnDisplay";
+import JupiterDisplay from "./JupiterDisplay";
 type PlanetComponentProps = {
   name: string;
   description: string;
@@ -26,29 +29,13 @@ const PlanetDisplay: FC<PlanetComponentProps> = ({ name, description }) => {
           className={planets(name.toLowerCase())}
         >
           {name.toLocaleLowerCase() === "jupiter" && (
-            <div
-              id="red-dot"
-              className="bg-red-700 lg:h-[40px] lg:w-[60px] md:h-[40px] md:w-[60px] sm:h-[30px] sm:w-[50px] h-[20px] w-[35px] absolute z-10 rounded-full -rotate-45 mt-6 ml-3 opacity-50 border-slate-200 border-solid border-4 blur-sm shadow-xl shadow-gray-100"
-            ></div>
+            <JupiterDisplay />
           )}
           {name.toLocaleLowerCase() === "saturn" && (
-            <div className="bg-white z-10 absolute rounded-full lg:h-[2px] lg:w-[520px] md:h-[2px] md:w-[400px] sm:h-[1px] sm:w-[300px] h-[1px] w-[220px]"></div>
+            <SaturnDisplay />
           )}
           {name.toLocaleLowerCase() === "earth" && (
-            <div id="earth-overlay" className="lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-[#041238] rounded-full flex items-center flex-col bg-gradient-to-b from-[#363e5b] via-[#041238] to-[#363e5b]">
-              <div className="lg:h-[60px] lg:w-[120px] mt-12 mr-12 rounded-t-lg bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-[25px] w-[100px] rounded-b-lg mr-7 bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-[20px] w-[60px] rounded-b-lg mr-10 bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-[20px] w-[40px] rounded-b-lg mr-6 bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-[20px] w-[20px] rounded-b-lg mr-2 bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[100px] ml-14 bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[120px] ml-[95px] bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[140px] ml-[125px] bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[120px] ml-[120px] bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[120px] ml-[110px] bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[80px] ml-[60px] bg-[#486444] blur-xl gap-0"></div>
-              <div className="h-8 w-[50px] ml-[20px] rounded-b-lg bg-[#486444] blur-xl gap-0"></div>
-            </div>
+            <EarthDisplay />
           )}
         </div>
       </div>
