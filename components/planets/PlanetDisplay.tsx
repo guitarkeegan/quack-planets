@@ -28,7 +28,7 @@ const PlanetDisplay : FC<PlanetComponentProps> = ({ name, description }) => {
           
         >
           {name.toLocaleLowerCase() === "jupiter" && 
-          <div id="red-dot" className="bg-red-700 lg:h-[40px] lg:w-[60px] absolute z-10 rounded-full -rotate-45 mt-6 ml-3 opacity-50 border-slate-200 border-solid border-4 blur-sm shadow-xl shadow-gray-100"></div>
+          <div id="red-dot" className="bg-red-700 lg:h-[40px] lg:w-[60px] md:h-[40px] md:w-[60px] sm:h-[30px] sm:w-[50px] h-[20px] w-[35px] absolute z-10 rounded-full -rotate-45 mt-6 ml-3 opacity-50 border-slate-200 border-solid border-4 blur-sm shadow-xl shadow-gray-100"></div>
         }
         {name.toLocaleLowerCase() === "saturn" &&
         <div className="bg-white z-10 absolute rounded-full lg:h-[2px] lg:w-[520px] md:h-[2px] md:w-[400px] sm:h-[1px] sm:w-[300px] h-[1px] w-[220px]"></div>
@@ -50,7 +50,7 @@ const planets = (name: string) => {
     case "mars":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full"
     case "jupiter":
-      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] rounded-full flex justify-center items-center"
+      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[250px] h-[250px] rounded-full flex justify-center items-center"
     case "saturn":
       return "lg:w-[18rem] lg:h-[18rem] md:w-[250px] md:h-[250px] sm:h-[200px] sm:w-[200px] w-[140px] h-[140px] bg-blue-400 rounded-full flex justify-center items-center"
     case "uranus":
