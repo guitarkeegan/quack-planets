@@ -25,6 +25,13 @@
     }
     
     #mars-container {
-    color: red;
+    color: red!important;
         
+    }
+
+    #uranus{
+    background: linear-gradient(115deg, rgba(230, 232, 238, 0.753) 25%,rgba(70, 112, 250, 0.555) 50.71%, rgba(107, 204, 255,0.5) 75%,rgba(100, 240, 255, 0.3) 100%);
+   
+    transform: rotateY(180deg);
+    transform: rotateZ(90deg);
     }
