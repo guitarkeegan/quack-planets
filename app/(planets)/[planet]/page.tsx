@@ -8,6 +8,6 @@ interface PlanetPageProps{
 }
 export default function Planet<PlanetPageProps>({ params }: { params: { planet: string } }) {
 
-return <PlanetDisplay name={params.planet} description="this is  a planet"/>
+return <PlanetDisplay name={params.planet} description={params.planet}/>
 }
 
