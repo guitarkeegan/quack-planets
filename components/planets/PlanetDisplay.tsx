@@ -37,6 +37,9 @@ const PlanetDisplay: FC<PlanetComponentProps> = ({ name, description }) => {
           {name.toLocaleLowerCase() === "earth" && (
             <EarthDisplay />
           )}
+          {name.toLocaleLowerCase() === "venus" && (
+            <div id="venus" className="lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-slate-100 opacity-40 rounded-full"></div>
+          )}
         </div>
       </div>
     </section>
@@ -48,7 +51,7 @@ const planets = (name: string) => {
     case "mercury":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
     case "venus":
-      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
+      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-orange-600 rounded-full";
     case "earth":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-[#041238] rounded-full";
     case "mars":
