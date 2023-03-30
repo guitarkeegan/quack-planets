@@ -8,17 +8,20 @@ import styles from './styles.module.css';
 import EarthDisplay from "./EarthDisplay";
 import SaturnDisplay from "./SaturnDisplay";
 import JupiterDisplay from "./JupiterDisplay";
+import { getPlanetByName } from "@/utils";
 type PlanetComponentProps = {
   name: string;
   description: string;
 };
 // todo add props for a style object.
-const PlanetDisplay = ({ name, description }: PlanetComponentProps) => {
+const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
+
+  const planet = await getPlanetByName(name);
   return (
     <section className="sm:grid sm:grid-cols-2 mt-24">
       <div className="text-white flex items-start justify-evenly flex-col px-6">
-        <h1 className={styles[name.toLocaleLowerCase()]}>{name}</h1>
-        <h2 className="text-2xl">{description}</h2>
+        <h1 className={styles[name.toLocaleLowerCase()]}>{planet?.name ?? 'Missing Name'}</h1>
+        <h2 className="text-2xl">{planet?.factOne}</h2>
       </div>
       <div
         id="planet-wrapper"
