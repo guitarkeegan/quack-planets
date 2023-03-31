@@ -49,7 +49,7 @@ const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
           {name.toLocaleLowerCase() === "venus" && (
             <VenusDisplay />
           )}
-          {name.toLocaleLowerCase() === "venus" && (
+          {name.toLocaleLowerCase() === "mercury" && (
             <MercuryDisplay />
           )}
         </div>
