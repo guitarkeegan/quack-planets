@@ -68,5 +68,8 @@
     background: linear-gradient(180deg, rgb(241 245 249), rgba(134, 134, 134, 0), rgba(60, 66, 90, 0), rgba(21, 36, 80, 0), rgba(21, 36, 80, 0), rgba(60, 66, 90, 0), rgba(134, 134, 134, 0), rgb(241 245 249));
 }
 
+#venus {
+  background: linear-gradient(145deg, white 10%, rgb(199, 166, 77) 20%, rgb(186, 126, 61) 40%, rgb(170, 109, 54) 60%, rgb(69, 41, 27) 80%, black 90%)
+}
 
 
