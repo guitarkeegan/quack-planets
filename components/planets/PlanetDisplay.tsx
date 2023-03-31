@@ -3,7 +3,7 @@
  * todo display on planets pages.
  */
 
-import { FC } from "react";
+import { FC } from 'react';
 import styles from './styles.module.css';
 import EarthDisplay from "./EarthDisplay";
 import SaturnDisplay from "./SaturnDisplay";
@@ -14,6 +14,8 @@ type PlanetComponentProps = {
   description: string;
 };
 // todo add props for a style object.
+
+
 const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
 
   const planet = await getPlanetByName(name);
@@ -22,11 +24,13 @@ const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
       <div className="text-white flex items-start justify-evenly flex-col px-6">
         <h1 className={styles[name.toLocaleLowerCase()]}>{planet?.name ?? 'Missing Name'}</h1>
         <h2 className="text-2xl">{planet?.factOne}</h2>
+
       </div>
       <div
-        id="planet-wrapper"
-        className="sm:mt-0 mt-12 flex justify-center items-center"
+        id='planet-wrapper'
+        className='sm:mt-0 mt-12 flex justify-center items-center'
       >
+
         <div
           id={styles[name.toLowerCase()]}
           className={planets(name.toLowerCase())}
@@ -41,6 +45,7 @@ const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
             <EarthDisplay />
           )}
         </div>
+
       </div>
     </section>
   );
@@ -48,6 +53,7 @@ const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
 
 const planets = (name: string) => {
   switch (name) {
+
     case "mercury":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
     case "venus":
@@ -66,6 +72,7 @@ const planets = (name: string) => {
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
     default:
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
+
   }
 };
 
