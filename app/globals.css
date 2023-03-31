@@ -62,10 +62,7 @@ body {
   }
 }
 
-.mercury-orbit {
-  height: 160px;
-  width: 160px;
-}
+
 
 /* =======venus======= */
 
@@ -90,10 +87,7 @@ body {
   }
 }
 
-.venus-orbit {
-  height: 200px;
-  width: 200px;
-}
+
 
 /* =======earth======= */
 
@@ -118,10 +112,7 @@ body {
   }
 }
 
-.earth-orbit {
-  height: 300px;
-  width: 300px;
-}
+
 .earth-moon-orbit {
   height: 25px;
   width: 25px;
@@ -174,10 +165,7 @@ body {
   }
 }
 
-.mars-orbit {
-  height: 370px;
-  width: 370px;
-}
+
 
 /* =======jupiter======= */
 
@@ -202,10 +190,7 @@ body {
   }
 }
 
-.jupiter-orbit {
-  height: 430px;
-  width: 430px;
-}
+
 
 /* =======saturn======= */
 
@@ -230,10 +215,7 @@ body {
   }
 }
 
-.saturn-orbit {
-  height: 500px;
-  width: 500px;
-}
+
 
 /* =======uranus======= */
 
@@ -258,10 +240,7 @@ body {
   }
 }
 
-.uranus-orbit {
-  height: 560px;
-  width: 560px;
-}
+
 
 /* =======neptune======= */
 
@@ -286,7 +265,4 @@ body {
   }
 }
 
-.neptune-orbit {
-  height: 620px;
-  width: 620px;
-}
+
