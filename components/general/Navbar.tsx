@@ -21,7 +21,7 @@ const getRoutes = async () => {
 const Navbar = async () => {
   const routes: Route[] = await getRoutes();
   return (
-    <div className="bg-white p-4 flex flex-row flex-wrap ">
+    <div className="bg-white p-2 flex flex-row flex-wrap mb-2 ">
       {routes.map((route, index) => (
         <Link className="p-2" key={index} href={`${route.href}`}>
           {route.name}
