@@ -11,6 +11,7 @@ import JupiterDisplay from "./JupiterDisplay";
 import { getPlanetByName } from "@/utils";
 import VenusDisplay from "./VenusDisplay";
 import MercuryDisplay from "./MercuryDisplay";
+import FactDisplay from "../general/FactDisplay";
 type PlanetComponentProps = {
   name: string;
   description: string;
@@ -37,26 +38,12 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
             {name.toLocaleLowerCase() === "venus" && <VenusDisplay />}
             {name.toLocaleLowerCase() === "mercury" && <MercuryDisplay />}
           </div>
-
         </div>
-        <div className="p-4 m-4 ">
-          <h2 className="text-white text-xl p-4 ">Did you know...</h2>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl flex flex-col items-center space-x-4 shadow-lg shadow-indigo-500/50">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factOne}
-            </p>
-          </div>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factTwo}
-            </p>
-          </div>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factThree}
-            </p>
-          </div>
-        </div>
+        <FactDisplay
+          fact1={planet?.factOne}
+          fact2={planet?.factTwo}
+          fact3={planet?.factThree}
+        />
       </section>
     </div>
   );
