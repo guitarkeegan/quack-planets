@@ -3,7 +3,6 @@
  * todo display on planets pages.
  */
 
-import { FC } from "react";
 import styles from "./styles.module.css";
 import EarthDisplay from "./EarthDisplay";
 import SaturnDisplay from "./SaturnDisplay";
@@ -11,6 +10,7 @@ import JupiterDisplay from "./JupiterDisplay";
 import { getPlanetByName } from "@/utils";
 import VenusDisplay from "./VenusDisplay";
 import MercuryDisplay from "./MercuryDisplay";
+import FactDisplay from "../general/FactDisplay";
 type PlanetComponentProps = {
   name: string;
   description: string;
@@ -21,7 +21,9 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
   const planet = await getPlanetByName(name);
   return (
     <div>
-      <h1 className="text-blue text-xl text-center p-2">{planet?.name}</h1>
+      <h1 className="text-white text-6xl text-center p-2 uppercase underline underline-offset-4 ">
+        {planet?.name}
+      </h1>
       <section className="sm:grid sm:grid-cols-2 mt-4">
         <div
           id="planet-wrapper"
@@ -37,26 +39,32 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
             {name.toLocaleLowerCase() === "venus" && <VenusDisplay />}
             {name.toLocaleLowerCase() === "mercury" && <MercuryDisplay />}
           </div>
-
+          {/* Overlay */}
+          <div id={styles["container"]}>
+            <div id={styles["overlay-box"]}>
+              <p className="text-white text-2xl">
+                {planet?.radiuskm}
+                <span>&#176;</span>
+              </p>
+              <div className={styles["line-1"]}></div>
+              <div className={styles["overlay-2"]}>
+                <div className={styles["line-2"]}></div>
+                <p className="text-white text-2xl">{planet?.coreType}</p>
+              </div>
+              <div className={styles["overlay-3"]}>
+                <div className={styles["line-3"]}></div>
+                <p className="text-white text-2xl">
+                  {planet?.averageDistanceFromSunkm.toString()}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="p-4 m-4 ">
-          <h2 className="text-white text-xl p-4 ">Did you know...</h2>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl flex flex-col items-center space-x-4 shadow-lg shadow-indigo-500/50">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factOne}
-            </p>
-          </div>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factTwo}
-            </p>
-          </div>
-          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
-            <p className="text-xl font-medium text-black flow-root">
-              {planet?.factThree}
-            </p>
-          </div>
-        </div>
+        <FactDisplay
+          fact1={planet?.factOne}
+          fact2={planet?.factTwo}
+          fact3={planet?.factThree}
+        />
       </section>
     </div>
   );
