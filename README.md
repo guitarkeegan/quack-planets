@@ -1,38 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quack Planets  ![MIT](https://img.shields.io/badge/license-MIT-green)
 
-## Getting Started
+  - [Description](#description)
+  - [Quackathon](#quackathon)
+  - [Fullfilled](#fullfilled)
+  - [GettingStarted](#gettingstarted)
+  - [Usage](#usage)
+  - [Contributions](#contributions)
+  - [Questions](#questions)
+  - [License](#license)
+  - [Demo](#demo)
 
-First, run the development server:
+  ## Description
+ 
+  Quackathon project for the DearJuniorDev Discord server, where we were tasked with creating an educational site about the planets of our solar system. A relational database and single page application were also required. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+  ## Quackathon
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  -- The website must be a SPA application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  ### Planets:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  > -- Each planet of the solar system must have its own profile page.
+  -- Each page must include at a minimum (Name of the planet, size, distance from the Sun, three identifying facts, solid or gas core, and a visual representation of the planet)
+  -- NOTE: No images, assets, emojis, or SVGs are permitted. The visual representation of each planet must be made ENTIRELY out of CSS.
+  -- If the planet has a moon, you must display the following information for every moon (Name, history behind name, and size). 
+  -- Planet pages must include at least two different components that are NOT used on your homepage.
+  -- If a planet has more than one moon, the moon information must be displayed in repeating elements.
+  -- All planet and moon content MUST be stored in a database.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  ### Backend:
 
-## Learn More
+  > -- You must use foreign keys.
+  -- Planets and Moons must be stored separate from one another.
+  -- You must incorporate one ENUM for the planet data.
 
-To learn more about Next.js, take a look at the following resources:
+  ### Homepage:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  > -- The homepage should be an overview of the solar system.
+  -- The data included will be up to each team.
+  -- The homepage must include at least two components that are NOT used on any planet page.
+  -- Homepage content does not need to be stored in a database and can be coded into your components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  ### README:
 
-## Deploy on Vercel
+  > -- Your README must include instructions for me to spin up the project locally, as well as an overview of the tech and/or libraries used.
+  -- It should also include a list of the Quackathon requirements and how those were met or exceeded by your team.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ## Fullfilled
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  ## GettingStarted
+
+  This application was built with NextJS. To run locally, clone the repo and in the command line type ```npm run dev```. This will only work if you have your own database with the planet information setup. If you'd like to see a live demo, scroll down to the link!
+
+  ## Usage
+
+  > This site may be used as an educational tool to learn a bit about the planets and moons of our solar system.
+
+  ## Contributions
+  
+  This project was created by Auroiah Morgan, Rick Rieger, and Keegan Anglim.
+
+  ## Questions
+
+  [Keegan](https://github.com/guitarkeegan)
+  [Rick](https://github.com/RickRieger)
+  [Auroiah](https://github.com/abmdev86)
+
+  ## License
+  This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) - click the link to read the license.
+  
+ ## Demo
+
+ https://quack-planets.vercel.app/
