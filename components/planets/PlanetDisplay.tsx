@@ -21,7 +21,7 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
   const planet = await getPlanetByName(name);
   return (
     <div>
-      <h1 className="text-white text-xl text-center p-2">{planet?.name}</h1>
+      <h1 className="text-blue text-xl text-center p-2">{planet?.name}</h1>
       <section className="sm:grid sm:grid-cols-2 mt-4">
         <div
           id="planet-wrapper"
