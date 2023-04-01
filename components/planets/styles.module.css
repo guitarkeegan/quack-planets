@@ -1,10 +1,10 @@
-.mercury {
+/* .mercury {
   color: red;
   font-size: 72px;
 }
 .saturn {
   color: yellow;
-}
+} */
 
 #jupiter {
   background: linear-gradient(
@@ -42,7 +42,7 @@
     rgba(134, 46, 5, 0.733) 25%,
     rgb(41, 24, 16, 0.5) 50.71%,
     rgba(65, 32, 2, 0.5) 75%,
-    rgba(56, 4, 2, 0.5) 100%
+    rgba(56, 4, 2) 100%
   );
 }
 
