@@ -72,4 +72,6 @@
   background: linear-gradient(145deg, white 10%, rgb(199, 166, 77) 20%, rgb(186, 126, 61) 40%, rgb(170, 109, 54) 60%, rgb(69, 41, 27) 80%, black 90%)
 }
 
-
+#mercury {
+  background: linear-gradient(-90deg, white 5%, rgb(187, 187, 187) 20%, rgb(107, 107, 107) 60%, rgb(50, 50, 50) 80%, rgb(26, 26, 26) 90%, rgb(20, 19, 20) 5%)
+}

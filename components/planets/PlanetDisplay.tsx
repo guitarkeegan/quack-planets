@@ -10,6 +10,7 @@ import SaturnDisplay from "./SaturnDisplay";
 import JupiterDisplay from "./JupiterDisplay";
 import { getPlanetByName } from "@/utils";
 import VenusDisplay from "./VenusDisplay";
+import MercuryDisplay from "./MercuryDisplay";
 type PlanetComponentProps = {
   name: string;
   description: string;
@@ -35,6 +36,7 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
             {name.toLocaleLowerCase() === "earth" && <EarthDisplay />}
             {name.toLocaleLowerCase() === "venus" && <VenusDisplay />}
           </div>
+          {name.toLocaleLowerCase() === "mercury" && <MercuryDisplay />}
         </div>
         <div className="p-4 m-4 ">
           <h2 className="text-white text-xl p-4 ">Did you know...</h2>
@@ -62,7 +64,7 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
 const planets = (name: string) => {
   switch (name) {
     case "mercury":
-      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
+      return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] rounded-full";
     case "venus":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] rounded-full";
     case "earth":
