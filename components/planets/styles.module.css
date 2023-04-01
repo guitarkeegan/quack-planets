@@ -33,9 +33,9 @@
 #mars {
   background: linear-gradient(
     145deg,
-    rgba(134, 46, 5, 0.733) 25%,
-    rgb(41, 24, 16, 0.5) 50.71%,
-    rgba(65, 32, 2, 0.5) 75%,
+    rgba(134, 46, 5) 25%,
+    rgb(22, 12, 7) 50.71%,
+    rgba(65, 32, 2) 75%,
     rgba(56, 4, 2) 100%
   );
 }
@@ -47,12 +47,12 @@
 #uranus {
   background: linear-gradient(
     115deg,
-    rgba(230, 232, 238, 0.753) 25%,
-    rgba(70, 112, 250, 0.555) 50.71%,
-    rgba(107, 204, 255, 0.5) 75%,
-    rgba(100, 240, 255, 0.3) 100%
+    rgba(230, 232, 238) 25%,
+    rgba(70, 112, 250) 50.71%,
+    rgba(107, 204, 255) 75%,
+    rgba(100, 240, 255) 100%
   );
-
+  box-shadow: 0 1px 6px rgba(241, 236, 236, 0.637), 0 1px 4px rgba(255, 253, 253, 0.74);
   transform: rotateY(180deg);
   transform: rotateZ(90deg);
 }
