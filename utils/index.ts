@@ -9,11 +9,10 @@ export const getAllPlanets = async () => {
 
 export const getPlanetByName = async (name:string)=>{
 
-  console.log('NAME ENTERED: ',name)
   let planet = await db.planet.findFirst({
     where: {name: {equals: name}}
   }) 
-  console.log(planet);
+ 
   if(planet === null || planet === undefined){
     console.error('MISSING PLANET DATA', planet)
   }
