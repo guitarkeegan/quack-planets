@@ -14,7 +14,7 @@ export const getPlanetByName = async (name:string)=>{
   }) 
  
   if(planet === null || planet === undefined){
-    console.error('MISSING PLANET DATA', planet)
+    console.error('MISSING PLANET DATA FOR', name)
   }
   return planet;
 }
