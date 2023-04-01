@@ -3,61 +3,64 @@
  * todo display on planets pages.
  */
 
-import { FC } from 'react';
-import styles from './styles.module.css';
+import { FC } from "react";
+import styles from "./styles.module.css";
 import EarthDisplay from "./EarthDisplay";
 import SaturnDisplay from "./SaturnDisplay";
 import JupiterDisplay from "./JupiterDisplay";
 import { getPlanetByName } from "@/utils";
-import VenusDisplay from './VenusDisplay';
+import VenusDisplay from "./VenusDisplay";
 type PlanetComponentProps = {
   name: string;
   description: string;
 };
 // todo add props for a style object.
 
-
-const PlanetDisplay = async ({ name, description }: PlanetComponentProps) => {
-
+const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
   const planet = await getPlanetByName(name);
   return (
-    <section className="sm:grid sm:grid-cols-2 mt-24">
-      <div className="text-white flex items-start justify-evenly flex-col px-6">
-        <h1 className={styles[name.toLocaleLowerCase()]}>{planet?.name ?? 'Missing Name'}</h1>
-        <h2 className="text-2xl">{planet?.factOne}</h2>
-
-      </div>
-      <div
-        id='planet-wrapper'
-        className='sm:mt-0 mt-12 flex justify-center items-center'
-      >
-
+    <div>
+      <h1 className="text-white text-xl text-center p-2">{planet?.name}</h1>
+      <section className="sm:grid sm:grid-cols-2 mt-4">
         <div
-          id={styles[name.toLowerCase()]}
-          className={planets(name.toLowerCase())}
+          id="planet-wrapper"
+          className="sm:mt-0 mt-12 flex justify-center items-center"
         >
-          {name.toLocaleLowerCase() === "jupiter" && (
-            <JupiterDisplay />
-          )}
-          {name.toLocaleLowerCase() === "saturn" && (
-            <SaturnDisplay />
-          )}
-          {name.toLocaleLowerCase() === "earth" && (
-            <EarthDisplay />
-          )}
-          {name.toLocaleLowerCase() === "venus" && (
-            <VenusDisplay />
-          )}
+          <div
+            id={styles[name.toLowerCase()]}
+            className={planets(name.toLowerCase())}
+          >
+            {name.toLocaleLowerCase() === "jupiter" && <JupiterDisplay />}
+            {name.toLocaleLowerCase() === "saturn" && <SaturnDisplay />}
+            {name.toLocaleLowerCase() === "earth" && <EarthDisplay />}
+            {name.toLocaleLowerCase() === "venus" && <VenusDisplay />}
+          </div>
         </div>
-
-      </div>
-    </section>
+        <div className="p-4 m-4 ">
+          <h2 className="text-white text-xl p-4 ">Did you know...</h2>
+          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl flex flex-col items-center space-x-4 shadow-lg shadow-indigo-500/50">
+            <p className="text-xl font-medium text-black flow-root">
+              {planet?.factOne}
+            </p>
+          </div>
+          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
+            <p className="text-xl font-medium text-black flow-root">
+              {planet?.factTwo}
+            </p>
+          </div>
+          <div className="p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4">
+            <p className="text-xl font-medium text-black flow-root">
+              {planet?.factThree}
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
 const planets = (name: string) => {
   switch (name) {
-
     case "mercury":
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
     case "venus":
@@ -76,7 +79,6 @@ const planets = (name: string) => {
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
     default:
       return "lg:w-[30rem] lg:h-[30rem] md:w-[400px] md:h-[400px] w-[280px] h-[280px] bg-blue-400 rounded-full";
-
   }
 };
 
