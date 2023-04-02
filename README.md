@@ -79,7 +79,9 @@
   ## Questions
 
   [Keegan](https://github.com/guitarkeegan)
+
   [Rick](https://github.com/RickRieger)
+  
   [Auroiah](https://github.com/abmdev86)
 
   ## License
@@ -88,5 +90,5 @@
  ## Demo
 
  https://quack-planets.vercel.app/
- 
+
  ![preview](./assets/images/quack-planets.gif)
