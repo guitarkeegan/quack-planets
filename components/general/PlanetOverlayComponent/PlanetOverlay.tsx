@@ -24,17 +24,21 @@ const PlanetOverlay: FC<PlanetOverlayProps> = ({
         <div id={styles["overlay-box"]}>
           <div className={styles["overlay-1"]}>
             <div className={styles["line-1"]}></div>
-            <p className="text-white text-2xl">
-              {radius?.toString() || "No data retrieved"}
-              <span>km</span>
-            </p>
+            <div id={styles["overlay-1-content"]}>
+              <p className="text-white text-2xl ">
+                {radius?.toString() || "No data retrieved"}
+                <span>km</span>
+              </p>
+            </div>
           </div>
 
           <div className={styles["overlay-2"]}>
             <div className={styles["line-2"]}></div>
-            <p className="text-white text-2xl">
-              {coreType || "No data retrieved"}
-            </p>
+            <div id={styles["overlay-2-content"]}>
+              <p className="text-white text-2xl">
+                {coreType || "No data retrieved"}
+              </p>
+            </div>
           </div>
 
           <div className={styles["overlay-3"]}>

@@ -7,6 +7,8 @@
   height: 100%;
   position: relative;
   opacity: 0.8;
+  margin: 0;
+  padding: 0;
 }
 .overlay-1 {
   bottom: 0;
@@ -23,7 +25,7 @@
 }
 .overlay-3 {
   position: relative;
-  bottom: 45vh;
+  bottom: 25vh;
   right: 60vw;
   opacity: 0.8;
   background: rgb(0, 0, 0);
@@ -39,6 +41,8 @@
   right: 45vw;
   opacity: 0.8;
   background: red;
+  margin: 0;
+  padding: 0;
 }
 .line-2 {
   width: 45vw;
@@ -48,15 +52,10 @@
   right: 50vw;
   opacity: 0.8;
   background: red;
+  margin: 0;
+  padding: 0;
 }
-/* .line-3 {
-  position: absolute;
-  width: 15em;
-  top: 5vh;
-  height: 2px;
-  opacity: 0.8;
-  background: red;
-} */
+
 .line-1::after {
   content: "RADIUS";
   color: yellow;
@@ -68,14 +67,98 @@
   background: rgb(0, 0, 0);
   padding: 2px;
 }
-/* .line-3::after {
-  content: "DISTANCE TO SUN";
-  color: yellow;
-  background: rgb(0, 0, 0);
-  padding: 2px;
-} */
+
 @media screen and (min-width: 640px) {
+  #container {
+    position: absolute;
+  }
+  #overlay-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+  }
+  .overlay-1 {
+    bottom: 0;
+    position: relative;
+    opacity: 0.8;
+    right: 30vw;
+    right: 0;
+  }
+  .overlay-2 {
+    top: 2vh;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    left: 5vw;
+    opacity: 0.8;
+  }
+  .overlay-3 {
+    position: absolute;
+    width: 100%;
+    bottom: 45vh;
+    right: 40vw;
+    opacity: 0.8;
+    background: rgb(0, 0, 0);
+    text-align: center;
+  }
   .line-1 {
+    width: 25vw;
+    height: 2px;
+    position: relative;
+    right: 25vw;
+    opacity: 0.8;
+    background: red;
+  }
+  #overlay-1-content {
+    position: relative;
+    margin: 0;
+    padding: 1px;
+    right: 10vw;
+    width: 50%;
+    background: rgb(0, 0, 0);
+  }
+  #overlay-1-content > p {
+    color: red;
+  }
+  #overlay-2-content {
+    position: relative;
+    margin: 0;
+    padding: 1px;
+    right: 10vw;
+    width: 50%;
+    background: rgb(0, 0, 0);
+  }
+  #overlay-2-content > p {
+    color: red;
+  }
+  .line-2 {
+    width: 25vw;
+    height: 2px;
+    position: relative;
+    right: 35vw;
+    opacity: 0.8;
+    background: red;
+    margin: 0;
+    padding: 0;
+  }
+
+  .line-1::after {
+    content: "RADIUS";
+    color: yellow;
+    background: rgb(0, 0, 0);
+  }
+
+  .line-2::after {
+    content: "CORE TYPE";
+    color: yellow;
+    background: rgb(0, 0, 0);
+    padding: 2px;
+  }
+
+  /* .line-1 {
     width: 15vw;
     height: 2px;
     position: relative;
@@ -94,8 +177,8 @@
     right: 5vw;
     opacity: 0.8;
     background: red;
-  }
-  .line-3 {
+  } */
+  /* .line-3 {
     width: 25vw;
     height: 2px;
     position: relative;
@@ -105,5 +188,5 @@
     right: 10vw;
     opacity: 0.8;
     background: red;
-  }
+  } */
 }
