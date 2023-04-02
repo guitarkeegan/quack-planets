@@ -57,12 +57,12 @@
 }
 
 .line-1::after {
-  content: "RADIUS";
+  content: 'RADIUS';
   color: yellow;
   background: rgb(0, 0, 0);
 }
 .line-2::after {
-  content: "CORE TYPE";
+  content: 'CORE TYPE';
   color: yellow;
   background: rgb(0, 0, 0);
   padding: 2px;
@@ -98,7 +98,7 @@
   .overlay-3 {
     position: absolute;
     width: 100%;
-    bottom: 45vh;
+    bottom: 39vh;
     right: 40vw;
     opacity: 0.8;
     background: rgb(0, 0, 0);
@@ -146,13 +146,13 @@
   }
 
   .line-1::after {
-    content: "RADIUS";
+    content: 'RADIUS';
     color: yellow;
     background: rgb(0, 0, 0);
   }
 
   .line-2::after {
-    content: "CORE TYPE";
+    content: 'CORE TYPE';
     color: yellow;
     background: rgb(0, 0, 0);
     padding: 2px;
