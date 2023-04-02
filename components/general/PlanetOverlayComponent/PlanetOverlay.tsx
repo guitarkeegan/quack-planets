@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styles from "./PlanetOverlay.module.css";
+import { FC } from 'react';
+import styles from './PlanetOverlay.module.css';
 
 interface PlanetOverlayProps {
   radius?: number;
@@ -9,7 +9,7 @@ interface PlanetOverlayProps {
 
 const expo = (x: string, f: number) => {
   if (x === undefined || x === null || x.trim().length === 0) {
-    return "Distance Unavailable";
+    return 'Distance Unavailable';
   }
   return Number.parseFloat(x).toExponential(f);
 };
@@ -19,34 +19,34 @@ const PlanetOverlay: FC<PlanetOverlayProps> = ({
   distanceFromSun,
 }) => {
   return (
-    <div id={styles["stack-top"]}>
-      <div id={styles["container"]}>
-        <div id={styles["overlay-box"]}>
-          <div className={styles["overlay-1"]}>
-            <div className={styles["line-1"]}></div>
-            <div id={styles["overlay-1-content"]}>
-              <p className="text-white text-2xl ">
-                {radius?.toString() || "No data retrieved"}
+    <div id={styles['stack-top']}>
+      <div id={styles['container']}>
+        <div id={styles['overlay-box']}>
+          <div className={styles['overlay-1']}>
+            <div className={styles['line-1']}></div>
+            <div id={styles['overlay-1-content']}>
+              <p className='text-white text-2xl '>
+                {radius?.toString() || 'No data retrieved'}
                 <span>km</span>
               </p>
             </div>
           </div>
 
-          <div className={styles["overlay-2"]}>
-            <div className={styles["line-2"]}></div>
-            <div id={styles["overlay-2-content"]}>
-              <p className="text-white text-2xl">
-                {coreType || "No data retrieved"}
+          <div className={styles['overlay-2']}>
+            <div className={styles['line-2']}></div>
+            <div id={styles['overlay-2-content']}>
+              <p className='text-white text-2xl'>
+                {coreType || 'No data retrieved'}
               </p>
             </div>
           </div>
 
-          <div className={styles["overlay-3"]}>
-            <p className="text-white text-xl">
+          <div className={styles['overlay-3']}>
+            <p className='text-white text-xl mt-4'>
               <span>Distance From sun </span>
               <br />
               {expo(distanceFromSun as string, 2).toString() ??
-                "Data unavailable"}
+                'Data unavailable'}
             </p>
           </div>
         </div>
