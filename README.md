@@ -62,7 +62,7 @@
   - ✅ Homepage displays all planets
   - ✅ Homepage includes planets and animation that is not included elsewhere
   - ✅ Readme contains instructions for how to start the development server
-  - ✅ Site has been deployed! 
+  - ✅ Site has been deployed! 🎉
 
   ## GettingStarted
 
@@ -88,3 +88,5 @@
  ## Demo
 
  https://quack-planets.vercel.app/
+ 
+ ![preview](./assets/images/quack-planets.gif)
