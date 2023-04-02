@@ -50,11 +50,10 @@
 
 #neptune {
   background: linear-gradient(
-    145deg,
-    rgba(134, 46, 5) 25%,
-    rgb(22, 12, 7) 50.71%,
-    rgba(65, 32, 2) 75%,
-    rgba(56, 4, 2) 100%
+    180deg,
+    rgb(67, 108, 244),
+    rgb(51, 67, 170),
+    rgb(32, 38, 87)
   );
 }
 
