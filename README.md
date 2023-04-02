@@ -49,6 +49,21 @@
 
   ## Fullfilled
 
+  - ✅ Each planet has a page
+  - ✅ All planet details are displayed
+  - ✅ Planets are made from html and css only
+  - ✅ Moon information is displayed with the planet page
+  - ✅ Planet pages contain at least the FactDisplay and Planet components
+  - ✅ Moon informtion is displayed via a map function
+  - ✅ All information is stored in a postgreSQL database
+  - ✅ Foreign key is used to relate moons to planets
+  - ✅ There are seperate Planet and Moon tables
+  - ✅ An Enum is used for Planet Core, SOLID or GAS
+  - ✅ Homepage displays all planets
+  - ✅ Homepage includes planets and animation that is not included elsewhere
+  - ✅ Readme contains instructions for how to start the development server
+  - ✅ Site has been deployed! 🎉
+
   ## GettingStarted
 
   This application was built with NextJS. To run locally, clone the repo and in the command line type ```npm run dev```. This will only work if you have your own database with the planet information setup. If you'd like to see a live demo, scroll down to the link!
@@ -64,7 +79,9 @@
   ## Questions
 
   [Keegan](https://github.com/guitarkeegan)
+
   [Rick](https://github.com/RickRieger)
+  
   [Auroiah](https://github.com/abmdev86)
 
   ## License
@@ -73,3 +90,5 @@
  ## Demo
 
  https://quack-planets.vercel.app/
+
+ ![preview](./assets/images/quack-planets.gif)

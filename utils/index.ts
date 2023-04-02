@@ -10,6 +10,9 @@ export const getAllPlanets = async () => {
 export const getPlanetByName = async (name: string) => {
   let planet = await db.planet.findFirst({
     where: { name: { equals: name } },
+    include: {
+      moon: true,
+    }
   });
 
   if (planet === null || planet === undefined) {
@@ -17,9 +20,9 @@ export const getPlanetByName = async (name: string) => {
   }
   return planet;
 };
-export const getMoonsById = async (id: string) => {
-  let moons = await db.moon.findMany({
-    where: { planetId: { equals: id } },
-  });
-  return moons;
-};
+// export const getMoonsById = async (id: string) => {
+//   let moons = await db.moon.findMany({
+//     where: { planetId: { equals: id } },
+//   });
+//   return moons;
+// };

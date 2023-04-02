@@ -8,7 +8,6 @@ import EarthDisplay from './EarthDisplay';
 import SaturnDisplay from './SaturnDisplay';
 import JupiterDisplay from './JupiterDisplay';
 import { getPlanetByName } from '@/utils';
-import { getMoonsById } from '@/utils';
 import VenusDisplay from './VenusDisplay';
 import MercuryDisplay from './MercuryDisplay';
 import FactDisplay from '../general/FactDisplay';
@@ -18,14 +17,12 @@ type PlanetComponentProps = {
   factOne: string;
   factTwo: string;
   factThree: string;
-  moons: { name: string; historyOfName: string; size: number };
+  moon: {name: string; historyOfName: string; size: number}[];
 };
 // todo add props for a style object.
 
 const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
   const planet = await getPlanetByName(name);
-  const moons: { name: string; historyOfName: string; size: number } =
-    await getMoonsById(planet!.id);
 
   return (
     <div>
@@ -72,8 +69,8 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
           fact1={planet?.factOne}
           fact2={planet?.factTwo}
           fact3={planet?.factThree}
-          moons={moons}
-          name={name}
+          moons={planet?.moon}
+          
         />
       </section>
     </div>

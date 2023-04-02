@@ -4,7 +4,7 @@ interface FactDisplayProps {
   fact1: string | undefined;
   fact2: string | undefined;
   fact3: string | undefined;
-  moons: { name: string; historyOfName: string; size: number }[];
+  moons?: { name: string; historyOfName: string; size: number }[];
 }
 
 const FactDisplay: FC<FactDisplayProps> = ({ fact1, fact2, fact3, moons }) => {
@@ -20,17 +20,22 @@ const FactDisplay: FC<FactDisplayProps> = ({ fact1, fact2, fact3, moons }) => {
       <div className='p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4'>
         <p className='text-xl font-medium text-black flow-root'>{fact3}</p>
       </div>
-      <h2 className='text-white text-xl p-4 '>Moons</h2>
+   
+      <h2 className='text-white text-xl p-4'>Moons</h2>
       <div className='p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4'>
-        <p className='text-xl font-medium text-black flow-root'>
-          {moons?.map((moon) => {
+        <div className='text-xl font-medium text-black flow-root'>
+          {moons?.length as number > 0 ? moons?.map((moon, i) => {
             return [
-              <p className='font-bold  text-blue-600'>{moon.name}</p>,
-              <p>{moon.historyOfName}</p>,
+              <p key={i} className='font-bold  text-blue-600'>{moon.name}</p>,
+              <p key={i + 1}>{moon.historyOfName}</p>,
             ];
-          })}
-        </p>
+          }) 
+        :
+        <p className='font-bold  text-blue-600'>Planet does not have moons</p>
+        }
+        </div>
       </div>
+
     </div>
   );
 };
