@@ -38,10 +38,6 @@
   );
 }
 
-#mars-container {
-  color: red !important;
-}
-
 #uranus {
   background: linear-gradient(
     115deg,
@@ -49,6 +45,16 @@
     rgba(70, 112, 250) 50.71%,
     rgba(107, 204, 255) 75%,
     rgba(100, 240, 255) 100%
+  );
+}
+
+#neptune {
+  background: linear-gradient(
+    145deg,
+    rgba(134, 46, 5) 25%,
+    rgb(22, 12, 7) 50.71%,
+    rgba(65, 32, 2) 75%,
+    rgba(56, 4, 2) 100%
   );
 }
 
@@ -88,117 +94,4 @@
     rgb(26, 26, 26) 90%,
     rgb(20, 19, 20) 5%
   );
-}
-
-/* overlay */
-#container {
-  width: 200px;
-  height: 200px;
-
-  position: relative;
-  margin: 20px;
-}
-#overlay-box {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
-.overlay-2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
-.overlay-3 {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 10px;
-  margin-top: 5em;
-  right: 15vw;
-  opacity: 0.8;
-}
-#stack-top {
-  z-index: 9;
-}
-.line-1 {
-  width: 35vw;
-  height: 2px;
-  position: relative;
-  top: 0px;
-  right: 30vw;
-  opacity: 0.8;
-  background: red;
-}
-.line-2 {
-  width: 25vw;
-  height: 2px;
-  position: relative;
-  margin-left: 0;
-  margin-top: 5em;
-  top: 0px;
-  right: 30vw;
-  opacity: 0.8;
-  background: red;
-}
-.line-3 {
-  width: 25vw;
-  height: 2px;
-  position: relative;
-  margin-left: 0;
-  margin-top: 5em;
-  top: 0px;
-  right: 30vw;
-  opacity: 0.8;
-  background: red;
-}
-.line-1::after {
-  content: "Radius";
-  color: yellow;
-}
-.line-2::after {
-  content: "Core Type";
-  color: yellow;
-}
-.line-3::after {
-  content: "Distance From the sun";
-  color: yellow;
-}
-@media screen and (min-width: 640px) {
-  .line-1 {
-    width: 15vw;
-    height: 2px;
-    position: relative;
-    top: 0;
-    right: 10vw;
-    opacity: 0.8;
-    background: white;
-  }
-  .line-2 {
-    width: 15vw;
-    height: 2px;
-    position: relative;
-    margin-left: 0;
-    margin-top: 5em;
-    top: 0px;
-    right: 5vw;
-    opacity: 0.8;
-    background: red;
-  }
-  .line-3 {
-    width: 25vw;
-    height: 2px;
-    position: relative;
-    margin-left: 0;
-    margin-top: 5em;
-    top: 0px;
-    right: 10vw;
-    opacity: 0.8;
-    background: red;
-  }
 }

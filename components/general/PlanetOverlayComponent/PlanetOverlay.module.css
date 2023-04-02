@@ -1,0 +1,109 @@
+/* overlay */
+#container {
+  position: absolute;
+}
+#overlay-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0.8;
+}
+.overlay-1 {
+  bottom: 0;
+  position: relative;
+  right: 35vw;
+  opacity: 0.8;
+}
+.overlay-2 {
+  top: 5vh;
+  bottom: 0;
+  position: relative;
+  right: 30vw;
+  opacity: 0.8;
+}
+.overlay-3 {
+  position: relative;
+  bottom: 45vh;
+  right: 60vw;
+  opacity: 0.8;
+  background: rgb(0, 0, 0);
+  text-align: center;
+}
+#stack-top {
+  z-index: 9;
+}
+.line-1 {
+  width: 50vw;
+  height: 2px;
+  position: relative;
+  right: 45vw;
+  opacity: 0.8;
+  background: red;
+}
+.line-2 {
+  width: 45vw;
+  height: 2px;
+  position: relative;
+  margin-top: 10vh;
+  right: 50vw;
+  opacity: 0.8;
+  background: red;
+}
+/* .line-3 {
+  position: absolute;
+  width: 15em;
+  top: 5vh;
+  height: 2px;
+  opacity: 0.8;
+  background: red;
+} */
+.line-1::after {
+  content: "RADIUS";
+  color: yellow;
+  background: rgb(0, 0, 0);
+}
+.line-2::after {
+  content: "CORE TYPE";
+  color: yellow;
+  background: rgb(0, 0, 0);
+  padding: 2px;
+}
+/* .line-3::after {
+  content: "DISTANCE TO SUN";
+  color: yellow;
+  background: rgb(0, 0, 0);
+  padding: 2px;
+} */
+@media screen and (min-width: 640px) {
+  .line-1 {
+    width: 15vw;
+    height: 2px;
+    position: relative;
+    top: 0;
+    right: 10vw;
+    opacity: 0.8;
+    background: white;
+  }
+  .line-2 {
+    width: 15vw;
+    height: 2px;
+    position: relative;
+    margin-left: 0;
+    margin-top: 5em;
+    top: 0px;
+    right: 5vw;
+    opacity: 0.8;
+    background: red;
+  }
+  .line-3 {
+    width: 25vw;
+    height: 2px;
+    position: relative;
+    margin-left: 0;
+    margin-top: 5em;
+    top: 0px;
+    right: 10vw;
+    opacity: 0.8;
+    background: red;
+  }
+}
