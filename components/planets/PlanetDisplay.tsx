@@ -26,8 +26,9 @@ type PlanetComponentProps = {
 // cannot pull facts from props pages that provide props does not hold actual planet data.
 
 const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
+  console.log('========>>>>', name)
   const planet = await getPlanetByName(name);
-
+  console.log('========>>>>', planet)
   return (
     <div>
       <h1 className='text-white text-6xl text-center p-2 uppercase underline underline-offset-4 '>
@@ -36,7 +37,7 @@ const PlanetDisplay = async ({ name }: PlanetComponentProps) => {
       <section className='sm:grid sm:grid-cols-2 mt-4'>
         <div
           id='planet-wrapper'
-          className='sm:mt-0 mt-12 flex justify-center items-center'
+          className='sm:mt-0 mt-12 flex justify-center items-start'
         >
           <div
             id={styles[name.toLowerCase()]}

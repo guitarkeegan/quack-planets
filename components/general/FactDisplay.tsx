@@ -9,7 +9,7 @@ interface FactDisplayProps {
 
 const FactDisplay: FC<FactDisplayProps> = ({ fact1, fact2, fact3, moons }) => {
   return (
-    <div className='p-4 m-4 '>
+    <div className='p-4 h-screen h-full flex overflow-y-auto flex-col flex-grow'>
       <h2 className='text-white text-xl p-4 '>Did you know...</h2>
       <div className='p-6 max-w-sm mx-auto mb-2 bg-white rounded-xl flex flex-col items-center space-x-4 shadow-lg shadow-indigo-500/50'>
         <p className='text-xl font-medium text-black flow-root'>{fact1}</p>
@@ -34,6 +34,9 @@ const FactDisplay: FC<FactDisplayProps> = ({ fact1, fact2, fact3, moons }) => {
         <p className='font-bold  text-blue-600'>Planet does not have moons</p>
         }
         </div>
+
+        <span className='mb-40'>{" "}</span>
+
       </div>
 
     </div>
